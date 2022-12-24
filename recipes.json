@@ -1,11 +1,24 @@
 {
     "1": {
-        "type": "shapeless",
-        "items": [],
-        "crafter": {
-            "machine": false,
-            "type": "crafting_table"
+        "input": {
+            "items": [],
+            "fluids": []
         },
-        "result": []
+        "output": {
+            "items": [],
+            "fluids": []
+        },
+        "machine": {
+            "voltage_tier": "LV",
+            "_type": "Centrifuge"
+        },
+        "ticks": 20,
+        "eu_per_tick": 24,
+        "total_eu": 480,
+        "multiblock": false,
+        "requires_cleanroom": false,
+        "requires_circuit": false,
+        "circuit": 0
+
     }
 }

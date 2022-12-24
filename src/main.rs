@@ -12,7 +12,7 @@ struct Fluid {
 struct Item {
     id: String,
     name: String,
-    amount: u32
+    amount: u32,
 }
 
 #[derive(Serialize, Deserialize)]
@@ -37,7 +37,9 @@ struct GTNHRecipe {
     eu_per_tick: u32,
     total_eu: u32,
     multiblock: bool,
-    requires_cleanroom: bool
+    requires_cleanroom: bool,
+    requires_circuit: bool,
+    circuit: u32
 
 }
 
