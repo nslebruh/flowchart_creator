@@ -1,24 +1,23 @@
-{
-    "1": {
-        "input": {
-            "items": [],
-            "fluids": []
-        },
-        "output": {
-            "items": [],
-            "fluids": []
-        },
-        "machine": {
-            "voltage_tier": "LV",
-            "_type": "Centrifuge"
-        },
-        "ticks": 20,
-        "eu_per_tick": 24,
-        "total_eu": 480,
-        "multiblock": false,
-        "requires_cleanroom": false,
-        "requires_circuit": false,
-        "circuit": 0
 
-    }
-}
+    [{"input": {
+        "items": [],
+        "fluids": []
+    },
+    "output": {
+        "items": [],
+        "fluids": []
+    },
+    "machine": {
+        "voltage_tier": "LV",
+        "_type": "Centrifuge"
+    },
+    "ticks": 20,
+    "eu_per_tick": 24,
+    "total_eu": 480,
+    "multiblock": false,
+    "requires_cleanroom": false,
+    "requires_circuit": false,
+    "circuit": 0
+    }]
+
+        

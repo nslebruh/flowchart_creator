@@ -1,6 +1,8 @@
 use serde::{Deserialize, Serialize};
+use std::fs;
+use serde_json::from_str;
 
-#[derive(Serialize, Deserialize)]
+#[derive(Serialize, Deserialize, Debug)]
 struct Fluid {
     id: String,
     name: String,
@@ -8,30 +10,30 @@ struct Fluid {
     temperature: i32
 }
 
-#[derive(Serialize, Deserialize)]
+#[derive(Serialize, Deserialize, Debug)]
 struct Item {
     id: String,
     name: String,
     amount: u32,
 }
 
-#[derive(Serialize, Deserialize)]
+#[derive(Serialize, Deserialize, Debug)]
 struct RecipeThings {
     items: Vec<Item>,
     fluids: Vec<Fluid>
 }
 
-#[derive(Serialize, Deserialize)]
+#[derive(Serialize, Deserialize, Debug)]
 struct Machine {
     voltage_tier: String,
     _type: String,
 
 }
 
-#[derive(Serialize, Deserialize)]
+#[derive(Serialize, Deserialize, Debug)]
 struct GTNHRecipe {
-    input: Vec<RecipeThings>,
-    output: Vec<RecipeThings>,
+    input: RecipeThings,
+    output: RecipeThings,
     machine: Machine,
     ticks: u32,
     eu_per_tick: u32,
@@ -43,6 +45,11 @@ struct GTNHRecipe {
 
 }
 
+
 fn main() {
     println!("Hello, world!");
+    let data = fs::read_to_string("recipes.json").expect("Failed to read recipes.json");
+    println!("{}", data);
+    let recipes: Vec<GTNHRecipe> = from_str(&data).expect("Unable to read data");
+    println!("{}", recipes[0].circuit)
 }
