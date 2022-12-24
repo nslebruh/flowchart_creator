@@ -1,0 +1,11 @@
+{
+    "1": {
+        "type": "shapeless",
+        "items": [],
+        "crafter": {
+            "machine": false,
+            "type": "crafting_table"
+        },
+        "result": []
+    }
+}
